@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RE:START - Personal Well-being Companion</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>RE:START</h1>
+            <p class="tagline">Progress, not pressure.</p>
+            <div id="user-info" class="user-info">
+                <span>Level: <strong id="level">1</strong></span>
+                <span>XP: <strong id="xp">0</strong></span>
+                <span>Streak: <strong id="streak">0</strong></span>
+            </div>
+        </header>
 
+        <section class="checkin-section">
+            <h2>Check-in Energi</h2>
+            <div class="energy-options">
+                <button class="energy-btn" data-energy="rendah">Rendah</button>
+                <button class="energy-btn" data-energy="sedang">Sedang</button>
+                <button class="energy-btn" data-energy="baik">Baik</button>
+                <button class="energy-btn" data-energy="sangat baik">Sangat Baik</button>
+            </div>
+            <p id="checkin-result"></p>
+        </section>
+
+        <section class="activities-section">
+            <h2>Daftar Aktivitas</h2>
+            <div id="activities-list" class="activities-list">
+                <!-- Aktivitas akan dimuat di sini -->
+            </div>
+        </section>
+
+        <section class="recommend-section">
+            <h2>Rekomendasi Personal</h2>
+            <input type="text" id="recommend-input" placeholder="Contoh: Aku lelah, ingin aktivitas santai">
+            <button id="recommend-btn">Dapatkan Rekomendasi</button>
+            <div id="recommend-results"></div>
+        </section>
+
+        <section class="custom-activity-section">
+            <h2>Buat Aktivitas Custom</h2>
+            <input type="text" id="custom-title" placeholder="Judul aktivitas">
+            <input type="text" id="custom-desc" placeholder="Deskripsi (opsional)">
+            <select id="custom-category">
+                <option value="fisik">Fisik</option>
+                <option value="mental">Mental</option>
+                <option value="kreatif">Kreatif</option>
+                <option value="skill">Skill</option>
+                <option value="sosial">Sosial</option>
+                <option value="istirahat">Istirahat</option>
+                <option value="lainnya">Lainnya</option>
+            </select>
+            <select id="custom-difficulty">
+                <option value="ringan">Ringan</option>
+                <option value="sedang">Sedang</option>
+                <option value="sulit">Sulit</option>
+            </select>
+            <button id="custom-create-btn">Tambah Aktivitas</button>
+        </section>
+
+        <section class="chat-section">
+            <h2>AI Coach</h2>
+            <div id="chat-log" class="chat-log"></div>
+            <input type="text" id="chat-input" placeholder="Ceritakan kondisi atau tanya rekomendasi...">
+            <button id="chat-send-btn">Kirim</button>
+        </section>
+
+        <section class="restart-section">
+            <button id="restart-btn">Restart Mode (Reset Streak)</button>
+        </section>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
